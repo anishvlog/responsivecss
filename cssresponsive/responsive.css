@@ -1,0 +1,98 @@
+   I* {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+.main-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.5fr 1.2fr 0.6fr;
+  grid-template-areas:
+    "header header header header"
+    "sidebar banner1 banner2 banner2"
+    "sidebar content1 content2 content3"
+    "footer footer footer footer";
+  color: black;
+  grid-row-gap:20px;
+  grid-column-gap:20px;
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
+
+header {
+  background: red;
+  grid-area: header;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#banner-one {
+  background: #cc3399;
+  grid-area: banner1;
+padding: 50px;
+  width: 50%;
+  height: 50%;
+  
+}
+#banner-two
+{
+   background: #0000ff;
+  grid-area: banner2;
+  width: 30%;
+  height: 50%;
+  padding: 50px;
+}
+
+#leftbar {
+  background: #33cc00;
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#Block-one {
+  background: #6666ff;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#Block-two {
+  background: #33cccc;
+  grid-area: content2;
+  
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#Block-three {
+  background: #ff0066;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+footer {
+  background: #cc00ff;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "header"
+      "leftbar"
+      "banner-one"
+      "banner-two"
+      "content-one"
+      "content-two"
+      "content-three"
+      "footer";
+  }
+}
